@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: EncodeSansExpandedRegular;
-    src: url(font/Encode_Sans_Expanded/EncodeSansExpanded-ExtraBold.ttf);
+    src: url(font/Encode_Sans_Expanded/EncodeSansExpanded-Regular.ttf);
 }
 
 * {
@@ -18,6 +18,19 @@
 body {
     font-weight: 400;
     font-family: sans-serif;
+}
+
+.typography-01 {
+    font-family: Cyrillic, sans-serif;
+    font-size: 50px;
+    line-height: 65px;
+    font-weight: 400;
+}
+
+.typography-02 {
+    font-family: EncodeSansExpandedRegular, sans-serif;
+    font-size: 30px;
+    font-weight: lighter;
 }
 
 .typography-03 {
@@ -127,12 +140,8 @@ header nav ul li a:hover {
     margin-left: -10px;
 }
 
-.contact-socials:hover>div {
-    width: 100%;
-}
-
 .contact-socials:hover>div div:last-of-type {
-    width: 100%;
+    width: 252px;
     margin-left: -45px;
     justify-content: flex-start;
 }
@@ -152,8 +161,8 @@ header nav ul li a:hover {
 
 .intro h1 {
     font-family: Cyrillic;
-    font-size: 56px;
-    line-height: 75px;
+    font-size: 50px;
+    line-height: 65px;
     font-weight: 400;
     min-width: 1075px;
     position: relative;
@@ -170,8 +179,8 @@ header nav ul li a:hover {
     gap: 15px;
     cursor: pointer;
     position: absolute;
-    top: 73px;
-    left: 540px;
+    top: 65px;
+    left: 485px;
 }
 
 .to_cases>div {
@@ -215,8 +224,8 @@ main {
 
 main h2 {
     font-family: Cyrillic;
-    font-size: 48px;
-    line-height: 75px;
+    font-size: 50px;
+    line-height: 65px;
     font-weight: 400;
 }
 
@@ -259,15 +268,15 @@ main span {
 }
 
 .title-b h2 {
-    font-size: 42px;
+    font-size: 50px;
     font-family: Cyrillic;
-    line-height: 55px;
+    line-height: 65px;
 }
 
 .title-b div {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 18px;
 }
 
 .mission-block {
@@ -336,9 +345,9 @@ main span {
 }
 
 .expert-title-b>h2 {
-    font-size: 42px;
+    font-size: 50px;
     font-family: Cyrillic;
-    line-height: 55px;
+    line-height: 65px;
 }
 
 .expert .expert-title-b>div {
@@ -432,7 +441,7 @@ main span {
 }
 
 .expert-circle p:last-of-type {
-    display: none;
+    position: absolute;
     opacity: 0;
 }
 
@@ -442,7 +451,7 @@ main span {
 }
 
 .expert-circle:hover p {
-    display: block;
+    position: relative;
     opacity: 1;
 }
 
