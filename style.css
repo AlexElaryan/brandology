@@ -556,7 +556,7 @@ main span {
     left: calc(100% + 30px);
 }
 
-.contact-socials:hover>div div {
+.wu_block .contact-socials:hover>div div {
     background: #FB74EA;
 }
 
@@ -758,7 +758,7 @@ footer .contact-socials svg path {
     fill: #000;
 }
 
-.contact-socials:hover>div div {
+footer .contact-socials:hover>div div {
     background: #fff;
 }
 
