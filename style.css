@@ -313,7 +313,7 @@ main span {
 }
 
 .mission-circle:last-of-type p {
-    max-width: 6850px;
+    max-width: 685px;
 }
 
 .mission-circle p {
@@ -966,4 +966,70 @@ footer .contact-socials span {
     flex-direction: column;
     max-width: 865px;
     gap: 100px;
+}
+
+
+.refauna_intro > div {
+    gap: 200px;
+}
+
+.refauna_circles {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.refauna_circles-item {
+    width: 430px;
+    height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    padding: 20px;
+}
+
+.refauna_circles-item h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.refauna_circles-item p {
+    text-align: center;
+    text-wrap: nowrap;
+    text-transform: uppercase;
+    display: none;
+    opacity: 0;
+    transition: .5s;
+}
+
+.refauna_circles-item:hover {
+    width: 530px;
+    height: 530px;
+}
+
+.refauna_circles-item:hover p {
+    display: block;
+    opacity: 1;
+}
+
+.refauna_clientReceives {
+    padding: 215px 100px;
+}
+
+.refauna_clientReceives h2 {
+    margin-left: 500px;
+}
+
+.refauna_clientReceives > div {
+    max-width: 100%;
+    gap: 250px;
+}
+
+.small-ref {
+    width: 396px;
+    height: 396px;
 }
