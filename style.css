@@ -55,7 +55,6 @@ button {
     width: 1115px;
     height: 1115px;
     padding: 88px 98.8px;
-    min-height: 100vh;
     position: relative;
 }
 
@@ -855,6 +854,7 @@ footer .contact-socials span {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 0;
 }
 
 .vanvex-head header {
@@ -876,15 +876,15 @@ footer .contact-socials span {
     width: 945px;
 }
 
-.vanvex_intro > div {
+.vanvex_intro>div {
     display: flex;
     align-items: center;
-    gap: 285px; 
+    gap: 285px;
     padding-top: 50px;
     border-top: 1px solid #000;
 }
 
-.vanvex_intro > div div {
+.vanvex_intro>div div {
     display: flex;
     flex-direction: column;
 }
@@ -911,14 +911,14 @@ footer .contact-socials span {
     gap: 100px;
 }
 
-.case-mission > div {
+.case-mission>div {
     max-width: 991px;
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-.case-mission > div div {
+.case-mission>div div {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -962,7 +962,7 @@ footer .contact-socials span {
     padding-right: 100px;
 }
 
-.clientReceives > div {
+.clientReceives>div {
     display: flex;
     flex-direction: column;
     max-width: 865px;
@@ -970,7 +970,7 @@ footer .contact-socials span {
 }
 
 
-.refauna_intro > div {
+.refauna_intro>div {
     gap: 200px;
 }
 
@@ -1025,7 +1025,7 @@ footer .contact-socials span {
     margin-left: 500px;
 }
 
-.refauna_clientReceives > div {
+.refauna_clientReceives>div {
     max-width: 100%;
     gap: 250px;
 }
@@ -1033,4 +1033,201 @@ footer .contact-socials span {
 .small-ref {
     width: 396px;
     height: 396px;
+}
+
+.anheleOurSAM {
+    padding: 290px 100px;
+}
+
+.anheleOurSAM>div:first-of-type {
+    margin-left: 400px;
+}
+
+.anheleOurSAM .refauna_circles {
+    width: 100%;
+    max-width: 100%;
+    gap: 0;
+}
+
+.anheleOurSAM .refauna_circles-item {
+    border: 1px solid #fff;
+    gap: 30px;
+}
+
+.anhele_results {
+    padding: 481px 100px 481px 500px;
+}
+
+.anhele_results>div {
+    width: 1065px;
+    display: flex;
+    gap: 255px;
+}
+
+.anhele_results p {
+    text-transform: uppercase;
+}
+
+.anhele_result-item {
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+}
+
+.anhele_result-item>div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.anhele_result-item>div div {
+    display: flex;
+    gap: 10px;
+}
+
+.anhele_results span {
+    font-weight: bold;
+    color: #828383;
+}
+
+.casePrev_cont {
+    width: 100%;
+    height: 100vh;
+    min-height: 1117px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.casePrev_cont-vanvex {
+    background-image: url(img/VANVEX.jpeg);
+    background-position-y: -1172px;
+}
+
+.casePrev_cont-refauna {
+    background-size: 2272px 1274px;
+    background-image: url(img/REFAUNA.jpeg);
+    background-position-y: -157px;
+}
+
+.casePrev_cont-anhelle {
+    background-image: url(img/ANHELLE.jpeg);
+    background-position-y: -712px;
+}
+
+.casePrev_cont>div {
+    width: 100%;
+    height: 100%;
+    padding: 70px 100px 200px 100px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.casePrev_cont header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 400px;
+}
+
+.casePrev_cont .typography-04 {
+    color: #fff;
+}
+
+.casePrev_cont header .contact-socials {
+    position: relative;
+    left: unset;
+    top: unset;
+}
+
+.casePrev_cont .contact-socials>div div {
+    background: #fff;
+}
+
+.casePrev_cont .contact-socials p {
+    color: #fff;
+}
+
+.casePrev_cont .contact-socials svg path {
+    fill: #000;
+}
+
+.casePrev_cont .contact-socials span {
+    color: #000;
+}
+
+.casePrev_cont header nav ul li a:hover {
+    color: #000;
+}
+
+.casePrev_content {
+    display: flex;
+    flex-direction: column;
+    gap: 147px;
+}
+
+.casePrev_content>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.casePrev-toCaseMain-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 5px 6px 30px;
+    border-radius: 100px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}   
+
+.casePrev-arrow {
+    width: 33px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    background: #fff;
+    position: relative;
+}
+
+.casePrev-arrow svg {
+    transform-origin: right;
+}
+
+.casePrev_content p {
+    text-transform: uppercase;
+}
+
+.casePrev_content .casePrev-arrow p {
+    transform: scale(0);
+    position: absolute;
+    left: 0px;
+    opacity: 0;
+    color: #000;
+}
+
+.casePrev-toCaseMain-btn:hover .casePrev-arrow svg {
+    transform: scale(0);
+}
+
+.casePrev-toCaseMain-btn:hover .casePrev-arrow p {
+    position: relative;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.casePrev-toCaseMain-btn:hover .casePrev-arrow {
+    width: 157px;
+    padding: 7px 16px;
+}
+
+.casePrev_cont .typography-01 {
+    margin-left: 400px;
+    max-width: 1105px;
+    margin-top: 240px;
 }
