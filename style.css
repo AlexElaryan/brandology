@@ -950,6 +950,16 @@ footer .contact-socials span {
     gap: 300px;
 }
 
+.ourSolutionAndMore p {
+    text-transform: uppercase;
+    max-width: 484px;
+}
+
+.ourSolutionAndMore h2 {
+    width: 380px;
+    min-width: 380px;
+}
+
 .ourSolutionAndMore div {
     max-width: 1065px;
     display: flex;
@@ -1182,7 +1192,7 @@ footer .contact-socials span {
     border-radius: 100px;
     border: 1px solid #fff;
     cursor: pointer;
-}   
+}
 
 .casePrev-arrow {
     width: 33px;
@@ -1230,4 +1240,100 @@ footer .contact-socials span {
     margin-left: 400px;
     max-width: 1105px;
     margin-top: 240px;
+}
+
+@media screen and (max-width:1740px) {
+    .mission-circle {
+        width: 620px;
+        height: 620px;
+    }
+
+    .mission-circle:hover {
+        width: 720px;
+        height: 720px;
+    }
+
+    .mission-circle.small {
+        width: 520px;
+        height: 520px;
+    }
+
+    .expert-circle {
+        width: 374px;
+        height: 374px;
+        padding: 20px;
+    }
+
+    .expert-circle:hover {
+        width: 474px;
+        height: 474px;
+    }
+
+    .expert-circle.small-exp {
+        width: 274px;
+        height: 274px;
+    }
+
+    .wu_block>div h2 {
+        font-size: 32px;
+    }
+
+    .footer-title h2 {
+        font-size: 100px;
+    }
+
+    .contactSocSets {
+        top: 100px;
+        left: 680px;
+        gap: 10px;
+    }
+
+    .wu_block>div h2::after {
+        width: 90px;
+    }
+
+    .ourSolutionAndMore,
+    .case-mission,
+    .clientReceives {
+        padding-left: 300px;
+    }
+
+    .vanvex_intro h2 {
+        margin-left: 0;
+    }
+
+    .case-mission {
+        gap: 50px;
+    }
+
+    .clientReceives>div {
+        gap: 50px;
+
+    }
+}
+
+@media screen and (max-width:1600px) {
+    .typography-01 {
+        font-size: 40px;
+    }
+
+    .typography-02 {
+        font-size: 18px;
+    }
+
+    .typography-03 {
+        font-size: 16px;
+    }
+
+    .typography-04 {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:1500px) {
+    .ourSolutionAndMore,
+    .case-mission,
+    .clientReceives {
+        padding-left: 100px;
+    }
 }
