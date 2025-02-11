@@ -27,7 +27,6 @@ toCases.onclick = () => {
     toCasesBlock.style.transform = 'scale(1)';
     intro.style.transform = 'scale(0)';
 
-    document.body.style.height = '1115px';
     document.body.style.overflow = 'hidden';
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }

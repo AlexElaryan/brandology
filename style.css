@@ -53,7 +53,7 @@ button {
 .head {
     margin: auto;
     width: 1115px;
-    height: 1115px;
+    height: 100vh;
     padding: 88px 98.8px;
     position: relative;
 }
@@ -67,6 +67,8 @@ button {
     object-fit: cover;
     z-index: -1;
 }
+
+
 
 header {
     width: 100%;
@@ -308,11 +310,11 @@ main span {
 }
 
 .mission-circle:first-of-type p {
-    max-width: 550px;
+    width: 550px;
 }
 
 .mission-circle:last-of-type p {
-    max-width: 685px;
+    width: 685px;
 }
 
 .mission-circle p {
@@ -450,6 +452,7 @@ main span {
 }
 
 .expert-circle p:last-of-type {
+    text-wrap: nowrap;
     position: absolute;
     opacity: 0;
 }
@@ -1103,7 +1106,7 @@ footer .contact-socials span {
 .casePrev_cont {
     width: 100%;
     height: 100vh;
-    min-height: 1117px;
+    /* min-height: 1117px; */
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -1242,6 +1245,19 @@ footer .contact-socials span {
     margin-top: 240px;
 }
 
+@media screen and (max-width:1850px) {
+    /* .work-process_item-content p {
+        text-wrap: wrap;
+    } */
+    .work-process_item-content {
+        gap: 50px;
+    }
+
+    .work-process_item-content div {
+        gap: 20px;
+    }
+}
+
 @media screen and (max-width:1740px) {
     .mission-circle {
         width: 620px;
@@ -1257,21 +1273,24 @@ footer .contact-socials span {
         width: 520px;
         height: 520px;
     }
+    .mission-circle:last-of-type p {
+        width: 600px;
+    }
 
     .expert-circle {
-        width: 374px;
-        height: 374px;
+        width: 430px;
+        height: 430px;
         padding: 20px;
     }
 
     .expert-circle:hover {
-        width: 474px;
-        height: 474px;
+        width: 530px;
+        height: 530px;
     }
 
     .expert-circle.small-exp {
-        width: 274px;
-        height: 274px;
+        width: 330px;
+        height: 330px;
     }
 
     .wu_block>div h2 {
@@ -1279,12 +1298,12 @@ footer .contact-socials span {
     }
 
     .footer-title h2 {
-        font-size: 100px;
+        font-size: 140px;
     }
 
     .contactSocSets {
-        top: 100px;
-        left: 680px;
+        top: 140px;
+        left: 930px;
         gap: 10px;
     }
 
@@ -1310,9 +1329,7 @@ footer .contact-socials span {
         gap: 50px;
 
     }
-}
 
-@media screen and (max-width:1600px) {
     .typography-01 {
         font-size: 40px;
     }
@@ -1328,12 +1345,181 @@ footer .contact-socials span {
     .typography-04 {
         font-size: 12px;
     }
+
+    .contact-socials:hover>div div:last-of-type {
+        width: 210px;
+    }
+
+    .expert-title-b>h2 {
+        width: 389.55px;
+    }
+
+    .casePrev_cont header {
+        padding-left: 300px;
+    }
+
+    .casePrev_cont .typography-01 {
+        margin-left: 300px;
+    }
+
+    .anheleOurSAM  {
+        padding-left: 100px;
+    }
+
+    .anheleOurSAM>div:first-of-type {
+        margin-left: 300px;
+    }
+
+    .anheleOurSAM .refauna_circles {
+        justify-content: center;
+    }
+
+    .refauna_circles-item {
+        width: 320px;
+        height: 320px;
+    }
+
+    .small-ref {
+        width: 250px;
+        height: 250px;
+    }
+
+    .refauna_circles-item:hover {
+        width: 420px;
+        height: 420px;
+    }
+    .anhele_results {
+        padding: 200px 100px;
+    }
+    .case-mission {
+        padding-top: 100px;
+    }
+    footer {
+        min-height: 100vh;
+        padding-bottom: 20px;
+    }
+    .footer-title {
+        margin-top: 30px;
+    }
+    .footer-bottom {
+        bottom: 20px;
+    }
+}
+
+@media screen and (max-width:1600px) {
+    .casePrev_cont header {
+        padding-left: 0px;
+    }
+
+    .casePrev_cont .typography-01 {
+        margin-left: 0px;
+    }
+    .casePrev_cont-vanvex {
+        background-position-y: -1000px;
+    }
+
+    .vanvex_intro>div {
+        gap: 100px;
+    }
+    .vanvex-head header {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1550px) {
+    .footer-title h2 {
+        font-size: 100px;
+    }
+
+    .contactSocSets {
+        top: 100px;
+        left: 680px;
+        gap: 10px;
+    }
 }
 
 @media screen and (max-width:1500px) {
+
     .ourSolutionAndMore,
     .case-mission,
     .clientReceives {
         padding-left: 100px;
+    }
+
+    .work-process_item {
+        padding: 30px 50px;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .work-process_item-content {
+        gap: 30px;
+    }
+    .casePrev_cont-vanvex {
+        background-position-y: -900px;
+    } 
+
+}
+
+@media screen and (max-height:1000px) {
+    .intro-to-cases-block {
+        top: 155px;
+    }
+    .vanvex_intro {
+        margin-top: 100px;
+        height: fit-content;
+    }
+}
+
+@media screen and (max-height:900px) {
+    .home .head {
+        width: 1060px;
+        padding-top: 70px;
+    }
+
+    .intro {
+        margin-top: 150px;
+    }
+
+    .intro-to-cases-block {
+        gap: 15px;
+    }
+    .casePrev_cont .typography-01 {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-height:850px) {
+    .intro-to-cases-block {
+        top: 110px;
+    }
+}
+
+@media screen and (max-height:820px) {
+    .home .head {
+        width: 950px;
+    }
+
+    .casePrev_content {
+        gap: 50px;
+    }
+}
+
+@media screen and (max-height:780px) {
+    .intro-to-cases-block {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-height:720px) {
+    .home .head {
+        width: 860px;
+    }
+
+    .intro {
+        margin-top: 100px;
+    }
+    .intro-to-cases-block {
+        gap: 5px;
     }
 }
