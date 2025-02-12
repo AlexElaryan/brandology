@@ -681,7 +681,7 @@ main span {
 
 .work-process_item-content {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 100px;
 }
 
