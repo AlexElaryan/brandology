@@ -72,7 +72,10 @@ button {
 
 header {
     width: 100%;
+    height: 60px;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 header nav ul {
@@ -101,7 +104,7 @@ header nav ul li a:hover {
 
 header .contact-socials {
     position: absolute;
-    top: -30px;
+    top: 0px;
     left: calc(100% + 40px);
 }
 
