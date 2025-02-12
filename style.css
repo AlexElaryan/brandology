@@ -1359,11 +1359,12 @@ footer .contact-socials span {
     }
 
     .casePrev_cont header {
-        /* padding-left: 300px; */
+        padding-left: 300px;
     }
 
     .casePrev_cont .typography-01 {
-        /* margin-left: 300px; */
+        margin-left: 300px;
+        max-width: 940px;
     }
 
     .anheleOurSAM  {
@@ -1411,13 +1412,6 @@ footer .contact-socials span {
 }
 
 @media screen and (max-width:1600px) {
-    .casePrev_cont header {
-        /* padding-left: 0px; */
-    }
-
-    .casePrev_cont .typography-01 {
-        /* margin-left: 0px; */
-    }
     .casePrev_cont-vanvex {
         background-position-y: -1000px;
     }
