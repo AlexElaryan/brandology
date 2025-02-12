@@ -55,6 +55,7 @@ button {
     width: 1115px;
     height: 100vh;
     padding: 88px 98.8px;
+    padding-top: 70px;
     position: relative;
 }
 
@@ -108,13 +109,6 @@ header .contact-socials {
     left: calc(100% + 40px);
 }
 
-
-@media screen and (max-width:1650px) {
-    header .contact-socials {
-        left: auto;
-        right: 0;
-    }
-}
 
 .contact-socials p {
     text-wrap: nowrap;
@@ -864,7 +858,18 @@ footer .contact-socials span {
 }
 
 .vanvex-head header {
-    width: 917px;
+    padding-left: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.vanvex-head header .contact-socials {
+    position: relative;
+    left: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
 }
 
 .vanvex_intro {
@@ -966,11 +971,30 @@ footer .contact-socials span {
     min-width: 380px;
 }
 
-.ourSolutionAndMore div {
+.ourSolutionAndMore>div {
     max-width: 1065px;
     display: flex;
     gap: 193px;
     color: #fff;
+}
+
+.ourSolutionAndMore .mission-block,
+.ourSolutionAndMore .expert-block {
+    margin-top: 0;
+    justify-content: center;
+    max-width: 100%;
+    width: 100%;
+    gap: 0;
+}
+
+.witexOurSam .clientReceives {
+    padding: 0;
+    padding-left: 400px;
+}
+
+.witexOurSam .clientReceives h2 {
+    min-width: 543px;
+    width: fit-content;
 }
 
 .clientReceives {
@@ -1112,6 +1136,7 @@ footer .contact-socials span {
     /* min-height: 1117px; */
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .casePrev_cont-vanvex {
@@ -1134,10 +1159,25 @@ footer .contact-socials span {
     background-image: url(img/VI\ TEX.jpeg);
 }
 
+.casePrev_cont-vmonkey {
+    background-image: url(img/VIKKY\ MONKEY.jpeg);
+    background-size: 1920px 2400px;
+    background-position-y: -782px;
+}
+
+.casePrev_cont-panda {
+    background-image: url(img/PANDAEXPORT.jpeg);
+    /* background-size: 1920px 1117px; */
+}
+
+.casePrev_cont-letitor {
+    background-image: url(img/LETITOR.jpeg);
+}
+
 .casePrev_cont>div {
     width: 100%;
     height: 100%;
-    padding: 70px 100px 200px 100px;
+    padding: 60px 100px 200px 100px;
     display: flex;
     flex-direction: column;
     color: #fff;
@@ -1253,6 +1293,7 @@ footer .contact-socials span {
 }
 
 @media screen and (max-width:1850px) {
+
     /* .work-process_item-content p {
         text-wrap: wrap;
     } */
@@ -1280,6 +1321,7 @@ footer .contact-socials span {
         width: 520px;
         height: 520px;
     }
+
     .mission-circle:last-of-type p {
         width: 600px;
     }
@@ -1318,15 +1360,6 @@ footer .contact-socials span {
         width: 90px;
     }
 
-    .ourSolutionAndMore,
-    .case-mission,
-    .clientReceives {
-        padding-left: 300px;
-    }
-
-    .vanvex_intro h2 {
-        margin-left: 0;
-    }
 
     .case-mission {
         gap: 50px;
@@ -1362,7 +1395,9 @@ footer .contact-socials span {
     }
 
     .casePrev_cont header {
-        padding-left: 300px;
+        width: calc(100% - 300px);
+        margin-left: 300px;
+        padding-left: 0;
     }
 
     .casePrev_cont .typography-01 {
@@ -1370,8 +1405,14 @@ footer .contact-socials span {
         max-width: 940px;
     }
 
-    .anheleOurSAM  {
-        padding-left: 100px;
+
+    .witexOurSam .clientReceives {
+        padding-left: 300px;
+    }
+
+    .witexOurSam .clientReceives h2 {
+        min-width: 430px;
+        max-width: 438px;
     }
 
     .anheleOurSAM>div:first-of-type {
@@ -1396,21 +1437,60 @@ footer .contact-socials span {
         width: 420px;
         height: 420px;
     }
+
     .anhele_results {
         padding: 200px 100px;
     }
+
     .case-mission {
-        padding-top: 100px;
+        padding-top: 200px;
     }
+
     footer {
         min-height: 100vh;
         padding-bottom: 20px;
     }
+
     .footer-title {
         margin-top: 30px;
     }
+
     .footer-bottom {
         bottom: 20px;
+    }
+
+    .ourSolutionAndMore,
+    .case-mission,
+    .clientReceives {
+        padding-left: 400px;
+    }
+
+    .anheleOurSAM {
+        padding-left: 100px;
+    }
+
+    .vanvex-head header,
+    .anhele_results {
+        padding-left: 300px;
+    }
+
+
+    .vanvex_intro h2 {
+        margin-left: 300px;
+    }
+
+}
+
+
+@media screen and (max-width:1650px) {
+    header .contact-socials {
+        left: auto;
+        right: 0;
+    }
+
+    .casePrev_cont header {
+        max-width: 862px;
+        width: 862px;
     }
 }
 
@@ -1422,6 +1502,7 @@ footer .contact-socials span {
     .vanvex_intro>div {
         gap: 100px;
     }
+
     .vanvex-head header {
         width: 100%;
     }
@@ -1456,9 +1537,10 @@ footer .contact-socials span {
     .work-process_item-content {
         gap: 30px;
     }
+
     .casePrev_cont-vanvex {
         background-position-y: -900px;
-    } 
+    }
 
 }
 
@@ -1466,6 +1548,7 @@ footer .contact-socials span {
     .intro-to-cases-block {
         top: 155px;
     }
+
     .vanvex_intro {
         margin-top: 100px;
         height: fit-content;
@@ -1475,7 +1558,7 @@ footer .contact-socials span {
 @media screen and (max-height:900px) {
     .home .head {
         width: 1060px;
-        padding-top: 70px;
+        padding-top: 60px;
     }
 
     .intro {
@@ -1485,6 +1568,7 @@ footer .contact-socials span {
     .intro-to-cases-block {
         gap: 15px;
     }
+
     .casePrev_cont .typography-01 {
         margin-top: 100px;
     }
@@ -1504,6 +1588,11 @@ footer .contact-socials span {
     .casePrev_content {
         gap: 50px;
     }
+
+    .casePrev_cont header {
+        max-width: 752px;
+        width: 752px;
+    }
 }
 
 @media screen and (max-height:780px) {
@@ -1520,7 +1609,13 @@ footer .contact-socials span {
     .intro {
         margin-top: 100px;
     }
+
     .intro-to-cases-block {
         gap: 5px;
+    }
+
+    .casePrev_cont header {
+        max-width: 662px;
+        width: 662px;
     }
 }
