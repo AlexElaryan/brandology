@@ -1127,6 +1127,10 @@ footer .contact-socials span {
     background-position-y: -712px;
 }
 
+.casePrev_cont-witex {
+    background-image: url(img/VI\ TEX.jpeg);
+}
+
 .casePrev_cont>div {
     width: 100%;
     height: 100%;
@@ -1355,11 +1359,11 @@ footer .contact-socials span {
     }
 
     .casePrev_cont header {
-        padding-left: 300px;
+        /* padding-left: 300px; */
     }
 
     .casePrev_cont .typography-01 {
-        margin-left: 300px;
+        /* margin-left: 300px; */
     }
 
     .anheleOurSAM  {
@@ -1380,8 +1384,8 @@ footer .contact-socials span {
     }
 
     .small-ref {
-        width: 250px;
-        height: 250px;
+        width: 290px;
+        height: 290px;
     }
 
     .refauna_circles-item:hover {
@@ -1408,11 +1412,11 @@ footer .contact-socials span {
 
 @media screen and (max-width:1600px) {
     .casePrev_cont header {
-        padding-left: 0px;
+        /* padding-left: 0px; */
     }
 
     .casePrev_cont .typography-01 {
-        margin-left: 0px;
+        /* margin-left: 0px; */
     }
     .casePrev_cont-vanvex {
         background-position-y: -1000px;
