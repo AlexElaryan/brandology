@@ -18,6 +18,7 @@
 body {
     font-weight: 400;
     font-family: sans-serif;
+    text-transform: uppercase;
 }
 
 a,
@@ -1170,8 +1171,31 @@ footer .contact-socials span {
     /* background-size: 1920px 1117px; */
 }
 
+.montesImgs {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.anhele_results .montesImgs {
+    margin-top: 200px;
+}
+
 .casePrev_cont-letitor {
     background-image: url(img/LETITOR.jpeg);
+}
+
+.casePrev_cont-sentient {
+    background-image: url(img/SENTIENT.jpeg);
+}
+
+.casePrev_cont-orgazm {
+    background-image: url(img/ORGAZMICBOOKS.jpeg);
+    
+}
+
+.casePrev_cont-montes {
+    background-image: url(img/montesBg.png);
 }
 
 .casePrev_cont>div {
