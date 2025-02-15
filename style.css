@@ -42,6 +42,7 @@ button {
 
 .typography-03 {
     font-family: EncodeSansExpandedRegular, sans-serif;
+    font-weight: normal;
     font-size: 20px;
 }
 
@@ -1019,6 +1020,7 @@ footer .contact-socials span {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .refauna_circles-item {
@@ -1059,7 +1061,7 @@ footer .contact-socials span {
 }
 
 .refauna_clientReceives {
-    padding: 215px 100px;
+    padding: 215px 100px !important;
 }
 
 .refauna_clientReceives h2 {
@@ -1106,6 +1108,7 @@ footer .contact-socials span {
 }
 
 .anhele_results p {
+    font-weight: 500;
     text-transform: uppercase;
 }
 
@@ -1191,7 +1194,7 @@ footer .contact-socials span {
 
 .casePrev_cont-orgazm {
     background-image: url(img/ORGAZMICBOOKS.jpeg);
-    
+
 }
 
 .casePrev_cont-montes {
@@ -1395,7 +1398,7 @@ footer .contact-socials span {
     }
 
     .typography-01 {
-        font-size: 40px;
+        font-size: 38px;
     }
 
     .typography-02 {
@@ -1493,9 +1496,12 @@ footer .contact-socials span {
         padding-left: 100px;
     }
 
-    .vanvex-head header,
-    .anhele_results {
+    .vanvex-head header {
         padding-left: 300px;
+    }
+
+    .anhele_results {
+        padding-left: 400px;
     }
 
 
@@ -1548,8 +1554,19 @@ footer .contact-socials span {
 
     .ourSolutionAndMore,
     .case-mission,
-    .clientReceives {
+    .clientReceives,
+    .anhele_results {
         padding-left: 100px;
+    }
+
+    .vanvex-head header {
+        padding-left: 0;
+    }
+
+    .vanvex_intro h2,
+    .anheleOurSAM>div:first-of-type,
+    .write-us>h2 {
+        margin-left: 0;
     }
 
     .work-process_item {
