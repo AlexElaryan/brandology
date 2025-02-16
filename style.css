@@ -1330,6 +1330,10 @@ footer .contact-socials span {
     gap: 20px;
 }
 
+.home .intro-to-services-block, .home .intro-to-cases-block {
+    transform: scale(0);
+}
+
 @media screen and (max-width:1850px) {
 
     /* .work-process_item-content p {

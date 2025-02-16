@@ -18,3 +18,26 @@ function forCircleHover(circle, classN) {
 forCircleHover(circles, 'small');
 forCircleHover(circlesExp, 'small-exp');
 forCircleHover(circlesRef, 'small-ref');
+
+const intro = document.querySelector('.intro');
+
+const toCases = document.querySelectorAll('.toCases');
+const toCasesBlock = document.querySelector('.intro-to-cases-block');
+
+const toServicesBlock = document.querySelector('.intro-to-services-block');
+const toServices = document.querySelectorAll('.toServices');
+
+function openPrevSites(btn, block) {
+    btn.forEach(el => {
+        el.onclick = () => {
+            block.style.transform = 'scale(1)';
+            intro.style.transform = 'scale(0)';
+        
+            document.body.style.overflow = 'hidden';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    })
+}
+
+openPrevSites(toCases, toCasesBlock);
+openPrevSites(toServices, toServicesBlock);
