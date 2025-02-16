@@ -999,7 +999,12 @@ footer .contact-socials span {
     width: fit-content;
 }
 
+.ourSolutionAndMore .clientReceives {
+    min-height: fit-content;
+}
+
 .clientReceives {
+    min-height: 100vh;
     padding: 433px 500px;
     padding-right: 100px;
 }
@@ -1098,6 +1103,10 @@ footer .contact-socials span {
 }
 
 .anhele_results {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
     padding: 481px 100px 481px 500px;
 }
 
@@ -1330,7 +1339,8 @@ footer .contact-socials span {
     gap: 20px;
 }
 
-.home .intro-to-services-block, .home .intro-to-cases-block {
+.home .intro-to-services-block,
+.home .intro-to-cases-block {
     transform: scale(0);
 }
 
@@ -1562,6 +1572,11 @@ footer .contact-socials span {
         top: 100px;
         left: 680px;
         gap: 10px;
+    }
+
+    .anhele_results>div {
+        width: 100%;
+        gap: 100px;
     }
 }
 
