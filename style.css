@@ -1111,6 +1111,10 @@ footer .contact-socials span {
     padding: 481px 100px 481px 500px;
 }
 
+.montes-results {
+    flex-direction: column;
+}
+
 .anhele_results>div {
     width: 1065px;
     display: flex;
