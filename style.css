@@ -813,7 +813,7 @@ footer .contact-socials span {
     width: fit-content;
     display: flex;
     flex-direction: column;
-    transform: scale(0);
+    transform: scale(1);
     gap: 20px;
 }
 
@@ -1317,6 +1317,17 @@ footer .contact-socials span {
     margin-left: 400px;
     max-width: 1105px;
     margin-top: 240px;
+}
+
+.intro-to-services-block {
+    transform: scale(1);
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+    width: 712px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 @media screen and (max-width:1850px) {
