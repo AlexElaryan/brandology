@@ -1004,8 +1004,10 @@ footer .contact-socials span {
 }
 
 .clientReceives {
+    display: flex;
+    align-items: center;
     min-height: 100vh;
-    padding: 433px 500px;
+    padding: 200px 500px;
     padding-right: 100px;
 }
 
