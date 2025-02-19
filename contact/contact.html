@@ -17,11 +17,11 @@
         <header>
             <nav>
                 <ul>
-                    <li><a class="typography-04" href="index.html">О НАС</a></li>
-                    <li><a class="typography-04" href="#">УСЛУГИ</a></li>
-                    <li><a class="typography-04" href="#">КЕЙСЫ</a></li>
+                    <li><a class="typography-04" href="../index.html">О НАС</a></li>
+                    <li><a class="typography-04" href="../toServices.html">УСЛУГИ</a></li>
+                    <li><a class="typography-04" href="../toCases.html">КЕЙСЫ</a></li>
                     <li><a class="typography-04" href="#">БЛОГ</a></li>
-                    <li><a class="typography-04" href="#">КОНТАКТЫ</a></li>
+                    <li><a class="typography-04" href="contact.html">КОНТАКТЫ</a></li>
                 </ul>
             </nav>
             <div class="contact-socials">
@@ -49,25 +49,30 @@
         <div class="contact-block">
             <h2 class="typography-01">ПРИВЕТ! НАПИШИ <br>
                 ПАРУ СЛОВ О ЗАДАЧЕ</h2>
-                <form method="POST">
+                <form method="POST" id="form">
+                    <input type="hidden" name="access_key" value="fdebe4be-6cdf-48e0-99c4-e6c5ea23c81b">
                     <div class="contact-form__top">
-                        <input type="text" placeholder="ИМЯ">
-                        <input type="text" placeholder="КОМПАНИЯ">
-                        <input type="text" placeholder="ТЕЛЕФОН">
-                        <input type="email" placeholder="E-MAIL">
+                        <input type="text" placeholder="ИМЯ" name="ИМЯ" required>
+                        <input type="text" placeholder="КОМПАНИЯ" name="КОМПАНИЯ" required>
+                        <input type="text" placeholder="ТЕЛЕФОН" name="ТЕЛЕФОН" required>
+                        <input type="email" placeholder="E-MAIL" name="E-MAIL" required>
                     </div>
-                    <input type="text" placeholder="УСЛУГА">
-                    <input type="text" placeholder="КРАТКО ОПИШИТЕ ЗАДАЧУ">
+                    <input type="text" placeholder="УСЛУГА" name="УСЛУГА">
+                    <input type="text" placeholder="КРАТКО ОПИШИТЕ ЗАДАЧУ" name="О ЗАДАЧУ">
                     <div class="contact-form__bottom">
                         <button class="submit typography-03" type="submit">ОСТАВИТЬ ЗАЯВКУ</button>
                         <div>
-                            <input type="checkbox" name="" id="contactCheckbox">
+                            <input type="checkbox" name="" id="contactCheckbox" required>
                             <label for="contactCheckbox" class="typography-04">Я СОГЛАСЕН С ОБРАБОТКОЙ ПЕРСОНАЛЬНЫХ ДАННЫХ</label>
                         </div>
                     </div>
+                    <div id="result" style="display: none;"></div>
                 </form>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="contact.js"></script>
 </body>
 
 </html>

@@ -1351,6 +1351,10 @@ footer .contact-socials span {
     transform: scale(0);
 }
 
+.home .tocases-page-case-block {
+    transform: scale(1);
+}
+
 @media screen and (max-width:1850px) {
 
     /* .work-process_item-content p {

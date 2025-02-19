@@ -143,8 +143,19 @@ form input::placeholder {
     transform: scale(1);
 }
 
+.Swal_btn {
+    transition: .3s;
+    background: #4C4C4C !important;
+    color: white !important;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+}
 
-
+.Swal_btn:hover {
+    background: #3F3F3F !important;
+}
 
 @media screen and (max-width:1740px) {
     .contact-block {
