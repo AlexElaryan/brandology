@@ -32,7 +32,7 @@ function openPrevSites(btn, block) {
         el.onclick = () => {
             block.style.transform = 'scale(1)';
             intro.style.transform = 'scale(0)';
-        
+
             document.body.style.overflow = 'hidden';
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
@@ -41,3 +41,19 @@ function openPrevSites(btn, block) {
 
 openPrevSites(toCases, toCasesBlock);
 openPrevSites(toServices, toServicesBlock);
+
+const toWk = document.querySelectorAll('.contact-socials>div div:last-of-type');
+const toTelegram = document.querySelectorAll('.contact-socials>div div:first-of-type');
+
+toWk.forEach(el => {
+    el.onclick = () => {
+        window.open('https://vk.com/club228472327', '_blank');
+    };
+});
+
+toTelegram.forEach(el => {
+    el.onclick = () => {
+        window.open('https://t.me/your_telegram_channel', '_blank');
+    };
+});
+

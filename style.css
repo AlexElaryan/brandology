@@ -1355,6 +1355,13 @@ footer .contact-socials span {
     transform: scale(1);
 }
 
+video {
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
 @media screen and (max-width:1850px) {
 
     /* .work-process_item-content p {
