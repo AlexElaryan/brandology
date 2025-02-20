@@ -57,3 +57,10 @@ toTelegram.forEach(el => {
     };
 });
 
+document.querySelector(".expert-top-href").addEventListener("mouseover", function () {
+    document.querySelector(".expert .expert-title-b > div").classList.add('expert-href_active-parent');
+});
+
+document.querySelector(".expert-top-href").addEventListener("mouseout", function () {
+    document.querySelector(".expert .expert-title-b > div").classList.remove('expert-href_active-parent');
+});

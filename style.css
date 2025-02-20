@@ -392,6 +392,35 @@ main span {
     fill: #FB74EA;
 }
 
+.expert-href_active-parent {
+    position: relative;
+    background: rgba(0, 0, 0, 0) !important;
+}
+
+.expert-href_active-parent .expert-bottom {
+    opacity: 0;
+}
+
+.expert-href_active-info {
+    display: none;
+    opacity: 0;
+}
+
+.expert-href_active-parent .expert-href_active-info {  
+    position: absolute; 
+    top: 263px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    opacity: 1;
+}
+
+.expert-href_active-info p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+}
+
 .expert-lk {
     width: 163px;
     height: 163px;
