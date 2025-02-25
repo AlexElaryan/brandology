@@ -406,8 +406,8 @@ main span {
     opacity: 0;
 }
 
-.expert-href_active-parent .expert-href_active-info {  
-    position: absolute; 
+.expert-href_active-parent .expert-href_active-info {
+    position: absolute;
     top: 263px;
     display: flex;
     flex-direction: column;
@@ -827,7 +827,11 @@ footer .contact-socials span {
     color: #fff;
 }
 
-.footer-bottom a:hover {
+.footer-bottom span {
+    cursor: pointer;
+}
+
+.footer-bottom a:hover, .footer-bottom span:hover {
     color: #FB74EA;
 }
 
@@ -1390,6 +1394,61 @@ video {
     box-shadow: none !important;
     background: transparent !important;
 }
+
+.for-body_filter {
+    display: none;
+    position: fixed;
+    z-index: 1111;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(55, 59, 66, 0.4);
+}
+
+.for-body_filter-active {
+    display: block;
+}
+
+.modal {
+    width: 492px;
+    z-index: 111111111111;
+    max-height: 95vh;
+    overflow-y: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) scale(0);
+    background: #fff;
+    border-radius: 20px;
+    padding: 32px;
+    transition: .3s;
+}
+
+.active-modal {
+    transform: translateY(-50%) translateX(-50%) scale(1);
+}
+
+.modal-organizationDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-organizationDetails a {
+    border-bottom: 1px solid;
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+}
+
+
 
 @media screen and (max-width:1850px) {
 

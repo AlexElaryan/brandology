@@ -53,14 +53,51 @@ toWk.forEach(el => {
 
 toTelegram.forEach(el => {
     el.onclick = () => {
-        window.open('https://t.me/your_telegram_channel', '_blank');
+        window.open('https://t.me/+_requ6cgzuFlYjNi', '_blank');
     };
 });
 
-document.querySelector(".expert-top-href").addEventListener("mouseover", function () {
-    document.querySelector(".expert .expert-title-b > div").classList.add('expert-href_active-parent');
-});
 
-document.querySelector(".expert-top-href").addEventListener("mouseout", function () {
-    document.querySelector(".expert .expert-title-b > div").classList.remove('expert-href_active-parent');
+if (document.querySelector(".expert-top-href")) {
+    document.querySelector(".expert-top-href").addEventListener("mouseover", function () {
+        document.querySelector(".expert .expert-title-b > div").classList.add('expert-href_active-parent');
+    });
+    
+    document.querySelector(".expert-top-href").addEventListener("mouseout", function () {
+        document.querySelector(".expert .expert-title-b > div").classList.remove('expert-href_active-parent');
+    });
+}
+
+
+const organizationDetailsBtn = document.querySelector('.organization-details');
+const organizationModal = document.querySelector('.modal-organizationDetails');
+const organizationModalClose = document.querySelectorAll('.organization-modal-close');
+const bodyFilterB = document.querySelector('.for-body_filter');
+
+function modalOpenBtn(el) {
+    el.classList.add('active-modal');
+    bodyFilterB.classList.add('for-body_filter-active');
+    document.body.style.overflow = 'hidden';
+}
+
+function modalCloseBtn(el) {
+    el.classList.remove('active-modal');
+    bodyFilterB.classList.remove('for-body_filter-active');
+    document.body.style.overflow = 'auto';
+}
+
+if (organizationDetailsBtn) {
+    organizationDetailsBtn.onclick = () => modalOpenBtn(organizationModal);
+}
+
+if (bodyFilterB) {
+    bodyFilterB.onclick = () => {
+        document.querySelectorAll('.active-modal').forEach(modalCloseBtn);
+    };
+}
+
+organizationModalClose.forEach(closeBtn => {
+    closeBtn.onclick = () => {
+        modalCloseBtn(organizationModal);
+    };
 });

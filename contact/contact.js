@@ -41,3 +41,19 @@ form.addEventListener('submit', function (e) {
             result.style.display = "none";
         });
 });
+
+
+const toWk = document.querySelectorAll('.contact-socials>div div:last-of-type');
+const toTelegram = document.querySelectorAll('.contact-socials>div div:first-of-type');
+
+toWk.forEach(el => {
+    el.onclick = () => {
+        window.open('https://vk.com/club228472327', '_blank');
+    };
+});
+
+toTelegram.forEach(el => {
+    el.onclick = () => {
+        window.open('https://t.me/+_requ6cgzuFlYjNi', '_blank');
+    };
+});
