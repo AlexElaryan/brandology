@@ -61,6 +61,12 @@ button {
     position: relative;
 }
 
+.home-head {
+    background: url(img/РОЗОВЫЙШАРФОН.gif);
+    background-size: cover;
+    background-position: center;
+}
+
 .bg-video {
     position: absolute;
     top: 0;
@@ -831,7 +837,8 @@ footer .contact-socials span {
     cursor: pointer;
 }
 
-.footer-bottom a:hover, .footer-bottom span:hover {
+.footer-bottom a:hover,
+.footer-bottom span:hover {
     color: #FB74EA;
 }
 
@@ -1686,29 +1693,6 @@ video {
     }
 }
 
-@media screen and (max-width:1380px) {
-
-    .ourSolutionAndMore,
-    .case-mission,
-    .clientReceives,
-    .anhele_results {
-        padding-left: 100px;
-    }
-
-    .vanvex-head header {
-        padding-left: 0;
-    }
-
-    .vanvex_intro h2,
-    .anheleOurSAM>div:first-of-type,
-    .write-us>h2 {
-        margin-left: 0;
-    }
-
-    .work-process_item {
-        padding: 30px 50px;
-    }
-}
 
 @media screen and (max-width:1400px) {
     .work-process_item-content {
@@ -1794,5 +1778,11 @@ video {
     .casePrev_cont header {
         max-width: 662px;
         width: 662px;
+    }
+}
+
+@media screen and (max-width:1380px) {
+    header nav {
+        display: none;
     }
 }

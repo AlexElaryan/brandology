@@ -59,6 +59,7 @@ toTelegram.forEach(el => {
 
 
 if (document.querySelector(".expert-top-href")) {
+
     document.querySelector(".expert-top-href").addEventListener("mouseover", function () {
         document.querySelector(".expert .expert-title-b > div").classList.add('expert-href_active-parent');
     });
