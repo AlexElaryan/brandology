@@ -32,9 +32,6 @@ function openPrevSites(btn, block) {
         el.onclick = () => {
             block.style.transform = 'scale(1)';
             intro.style.transform = 'scale(0)';
-
-            document.body.style.overflow = 'hidden';
-            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     })
 }
@@ -63,7 +60,7 @@ if (document.querySelector(".expert-top-href")) {
     document.querySelector(".expert-top-href").addEventListener("mouseover", function () {
         document.querySelector(".expert .expert-title-b > div").classList.add('expert-href_active-parent');
     });
-    
+
     document.querySelector(".expert-top-href").addEventListener("mouseout", function () {
         document.querySelector(".expert .expert-title-b > div").classList.remove('expert-href_active-parent');
     });
