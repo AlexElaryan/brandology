@@ -14,31 +14,41 @@ function forCircleHover(circle, classN) {
         });
     }
 }
+function observeVisibility(elementsSelector, animateClass) {
+    const observer = new IntersectionObserver(entries => {
+        let mostVisible = null;
+        let maxRatio = 0;
 
-function forCircleScroll(circle, classN) {
-    if (circle) {
-        window.addEventListener('scroll', () => {
-            circle.forEach(el => {
-                const rect = el.getBoundingClientRect();
-                if (rect.top < window.innerHeight && rect.bottom > 0) {
-                    el.classList.add(classN);
-                } else {
-                    el.classList.remove(classN);
-                }
-            });
+        // Находим наиболее видимый элемент
+        entries.forEach(entry => {
+            if (entry.intersectionRatio > maxRatio) {
+                mostVisible = entry.target;
+                maxRatio = entry.intersectionRatio;
+            }
         });
-    }
+
+        // Добавляем класс animate только к наиболее видимому элементу
+        elementsSelector.forEach(el => {
+            el.classList.toggle(animateClass, el === mostVisible);
+        });
+    }, { threshold: [0.1, 0.5, 1] });
+
+    // Применяем наблюдатель ко всем элементам, соответствующим селектору
+    elementsSelector.forEach(el => observer.observe(el));
 }
+
+
 
 function updateCircleBehavior() {
     if (window.innerWidth >= 1380) {
         forCircleHover(circles, 'small');
         forCircleHover(circlesExp, 'small-exp');
         forCircleHover(circlesRef, 'small-ref');
-    } else {
-        forCircleScroll(circles, 'mob-circle-anim');
-        forCircleScroll(circlesExp, 'mob-circle-anim');
-        forCircleScroll(circlesRef, 'mob-circle-anim');
+    }
+    else {
+        observeVisibility(circles, 'mob-circle-anim');
+        observeVisibility(circlesExp, 'mob-circle-anim');
+        observeVisibility(circlesRef, 'mob-circle-anim');
     }
 }
 

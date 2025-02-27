@@ -61,12 +61,12 @@ button {
     position: relative;
 }
 
-/* 
+
 .home-head {
     background: url(img/РОЗОВЫЙШАРФОН.gif);
     background-size: cover;
     background-position: center;
-} */
+}
 
 .bg-video {
     position: absolute;
@@ -1794,6 +1794,11 @@ video {
         display: none;
     }
 
+    .home-head {
+        background-size: 468px;
+        height: 468px;
+    }
+
     .intro h1,
     .typography-01 {
         min-width: fit-content;
@@ -2132,9 +2137,29 @@ video {
     }
 
     .work-process_item:hover {
-        height: 80px;
+        height: fit-content;
     }
 
+    .work-process_item-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .work-process_item-content div {
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .work-process_item-content p {
+        text-wrap: wrap;
+        width: calc(100% - 130px);
+    }
+
+    .work-process_item-content span.typography-04 {
+        text-wrap: wrap;
+        width: 120px;
+    }
 
     .work-process_subtitle-box {
         width: 100%;
@@ -2144,14 +2169,58 @@ video {
         padding: 70px 0;
     }
 
-    .mission-circle:hover, .expert-circle:hover, .mission-circle.small, .expert-circle.small-exp {
+
+    /* @keyframes appear {
+        from {
+            width: 200px;
+            height: 200px;
+        }
+        to {
+            width: 310px;
+            height: 310px;
+        }
+    }
+
+    .mission-circle, .expert-circle {
+        transition: .3s;
+        animation: appear linear;
+        animation-timeline: view();
+        animation-range: entry 0% entry 100%;
+    }
+     */
+
+     .mission-circle {
+        width: 200px;
+        height: 200px;
+        transition: 0.3s;
+    }
+
+    .mission-circle:hover,
+    .expert-circle:hover {
         width: 200px;
         height: 200px;
     }
 
-    .mission-circle:first-of-type p {
-        width: 100%;
+    .mission-circle:hover p:last-of-type,
+    .expert-circle:hover p:last-of-type,
+    .mission-circle.small p:last-of-type,
+    .expert-circle.small-exp p:last-of-type {
+        position: absolute;
+        opacity: 0;
     }
+    
+    .mission-circle:first-of-type p {
+        width: fit-content;
+    }
+
+
+    .mob-circle-anim p:last-of-type {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .modal {
         width: 300px;
         padding-top: 40px;
@@ -2171,8 +2240,8 @@ video {
     }
 
     .mob-circle-anim {
-        width: 290px;
-        height: 290px;
+        width: 310px;
+        height: 310px;
         gap: 5px;
     }
 
