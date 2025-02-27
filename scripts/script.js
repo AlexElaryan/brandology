@@ -11,13 +11,42 @@ function forCircleHover(circle, classN) {
             el.addEventListener('mouseleave', () => {
                 circle.forEach(c => c.classList.remove(classN));
             });
-        })
+        });
     }
 }
 
-forCircleHover(circles, 'small');
-forCircleHover(circlesExp, 'small-exp');
-forCircleHover(circlesRef, 'small-ref');
+function forCircleScroll(circle, classN) {
+    if (circle) {
+        window.addEventListener('scroll', () => {
+            circle.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    el.classList.add(classN);
+                } else {
+                    el.classList.remove(classN);
+                }
+            });
+        });
+    }
+}
+
+function updateCircleBehavior() {
+    if (window.innerWidth >= 1380) {
+        forCircleHover(circles, 'small');
+        forCircleHover(circlesExp, 'small-exp');
+        forCircleHover(circlesRef, 'small-ref');
+    } else {
+        forCircleScroll(circles, 'mob-circle-anim');
+        forCircleScroll(circlesExp, 'mob-circle-anim');
+        forCircleScroll(circlesRef, 'mob-circle-anim');
+    }
+}
+
+// Вызываем при загрузке
+updateCircleBehavior();
+
+// Следим за изменением размера экрана
+window.addEventListener('resize', updateCircleBehavior);
 
 const intro = document.querySelector('.intro');
 

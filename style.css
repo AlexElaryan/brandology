@@ -2169,4 +2169,16 @@ video {
         width: 390px;
         overflow: hidden;
     }
+
+    .mob-circle-anim {
+        width: 290px;
+        height: 290px;
+        gap: 5px;
+    }
+
+    .mob-circle-anim p:last-of-type {
+        opacity: 1;
+        display: flex;
+        position: relative;
+    }
 }
