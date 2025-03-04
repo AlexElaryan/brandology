@@ -94,16 +94,48 @@ toTelegram.forEach(el => {
 });
 
 
-if (document.querySelector(".expert-top-href")) {
+function setupHoverBehavior() {
+    const expertLink = document.querySelector(".expert-top-href");
+    const expertTitle = document.querySelector(".expert .expert-title-b > div");
 
-    document.querySelector(".expert-top-href").addEventListener("mouseover", function () {
-        document.querySelector(".expert .expert-title-b > div").classList.add('expert-href_active-parent');
-    });
+    if (!expertLink || !expertTitle) return;
 
-    document.querySelector(".expert-top-href").addEventListener("mouseout", function () {
-        document.querySelector(".expert .expert-title-b > div").classList.remove('expert-href_active-parent');
-    });
+    function toggleMobileHover(event) {
+        expertTitle.classList.toggle('expert-href_active-parent');
+        event.stopPropagation();
+    }
+
+    function closeMobileHover() {
+        expertTitle.classList.remove('expert-href_active-parent');
+    }
+
+    function isMobile() {
+        return window.matchMedia("(max-width: 768px)").matches;
+    }
+
+    expertLink.replaceWith(expertLink.cloneNode(true));
+    document.removeEventListener("click", closeMobileHover);
+
+    const newExpertLink = document.querySelector(".expert-top-href");
+
+    if (isMobile()) {
+        newExpertLink.addEventListener("click", toggleMobileHover);
+        document.addEventListener("click", closeMobileHover);
+    } else {
+        newExpertLink.addEventListener("mouseover", function () {
+            expertTitle.classList.add('expert-href_active-parent');
+        });
+
+        newExpertLink.addEventListener("mouseout", function () {
+            expertTitle.classList.remove('expert-href_active-parent');
+        });
+    }
 }
+
+setupHoverBehavior();
+window.addEventListener("resize", setupHoverBehavior);
+
+
 
 
 const organizationDetailsBtn = document.querySelector('.organization-details');
@@ -138,3 +170,9 @@ organizationModalClose.forEach(closeBtn => {
         modalCloseBtn(organizationModal);
     };
 });
+
+const burgerBtn = document.querySelector('.burger-btn');
+
+burgerBtn.onclick = () => {
+    burgerBtn.classList.toggle('burger-btn-active');
+}

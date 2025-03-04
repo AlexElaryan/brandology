@@ -391,11 +391,11 @@ main span {
     cursor: pointer;
 }
 
-.expert-top-href:hover {
+.expert-href_active-parent .expert-top-href {
     border: 1px solid #FB74EA;
 }
 
-.expert-top-href:hover svg path {
+.expert-href_active-parent .expert-top-href svg path {
     fill: #FB74EA;
 }
 
@@ -1456,6 +1456,37 @@ video {
     cursor: pointer;
 }
 
+.burger-btn {
+    width: 38px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    right: 45px;
+    top: 50px;
+    transform-origin: left;
+}
+
+.burger-btn span {
+    width: 38px;
+    height: 1px;
+    background: #000;
+}
+
+
+.burger-btn-active span {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.burger-btn-active span:first-of-type {
+    transform: rotateZ(45deg);
+}
+
+.burger-btn-active span:last-of-type {
+    transform: rotateZ(-45deg);
+}
+
 
 
 @media screen and (max-width:1850px) {
@@ -1790,9 +1821,21 @@ video {
 }
 
 @media screen and (max-width:1380px) {
+    main {
+        height: fit-content;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
     header nav {
         display: none;
     }
+/* 
+    header {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100vh;
+    } */
 
     .home-head {
         background-size: 468px;
@@ -1979,8 +2022,8 @@ video {
     }
 
     .expert-top-href svg {
-        width: 16px;
-        height: 24px;
+        width: 11px;
+        height: auto;
     }
 
     .expert-bottom h2 {
@@ -1990,8 +2033,8 @@ video {
     }
 
     .expert-href_active-parent .expert-href_active-info {
-        top: 20px;
-        left: 90px;
+        top: 10px;
+        left: 96px;
         gap: 5px;
     }
 
@@ -2037,6 +2080,10 @@ video {
     .wu_block>div {
         padding: 20px 10px;
         gap: 23px;
+    }
+
+    .wu_block>div:first-of-type {
+        padding-left: 0;
     }
 
     .wu_block::before {
@@ -2090,7 +2137,24 @@ video {
     }
 
     footer {
+        min-height: fit-content;
+        height: 582px;
         padding: 50px 40px 50px 50px;
+        overflow: hidden;
+        background: #000;
+    }
+
+    footer .bg-video {
+        width: 681px;
+        height: 384px;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 1;
+    }
+
+    .footer-top, .footer-title, .footer-bottom {
+        z-index: 11;
     }
 
     .footer-bottom {
@@ -2130,6 +2194,7 @@ video {
         width: 90px;
         height: 100%;
         position: relative;
+        color: #000;
     }
 
     .work-process_item {
