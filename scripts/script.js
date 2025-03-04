@@ -1,9 +1,11 @@
-const circles = document.querySelectorAll('.mission-circle');
-const circlesExp = document.querySelectorAll('.expert-circle');
-const circlesRef = document.querySelectorAll('.refauna_circles-item');
+document.addEventListener("DOMContentLoaded", () => {
+    const circles = document.querySelectorAll('.mission-circle');
+    const circlesExp = document.querySelectorAll('.expert-circle');
+    const circlesRef = document.querySelectorAll('.refauna_circles-item');
 
-function forCircleHover(circle, classN) {
-    if (circle) {
+    function forCircleHover(circle, classN) {
+        if (!circle.length) return;
+
         circle.forEach(el => {
             el.addEventListener('mouseenter', () => {
                 circle.forEach(c => c !== el && c.classList.add(classN));
@@ -13,50 +15,50 @@ function forCircleHover(circle, classN) {
             });
         });
     }
-}
-function observeVisibility(elementsSelector, animateClass) {
-    const observer = new IntersectionObserver(entries => {
-        let mostVisible = null;
-        let maxRatio = 0;
 
-        // Находим наиболее видимый элемент
-        entries.forEach(entry => {
-            if (entry.intersectionRatio > maxRatio) {
-                mostVisible = entry.target;
-                maxRatio = entry.intersectionRatio;
-            }
-        });
+    let observer = null;
 
-        // Добавляем класс animate только к наиболее видимому элементу
-        elementsSelector.forEach(el => {
-            el.classList.toggle(animateClass, el === mostVisible);
-        });
-    }, { threshold: [0.1, 0.5, 1] });
+    function observeVisibility(elements, animateClass) {
+        if (observer) observer.disconnect();
 
-    // Применяем наблюдатель ко всем элементам, соответствующим селектору
-    elementsSelector.forEach(el => observer.observe(el));
-}
+        observer = new IntersectionObserver(entries => {
+            let mostVisible = null;
+            let maxRatio = 0;
 
+            entries.forEach(entry => {
+                if (entry.intersectionRatio > maxRatio) {
+                    mostVisible = entry.target;
+                    maxRatio = entry.intersectionRatio;
+                }
+            });
 
+            elements.forEach(el => {
+                el.classList.toggle(animateClass, el === mostVisible);
+            });
+        }, { threshold: [0.1, 0.5, 1] });
 
-function updateCircleBehavior() {
-    if (window.innerWidth >= 1380) {
-        forCircleHover(circles, 'small');
-        forCircleHover(circlesExp, 'small-exp');
-        forCircleHover(circlesRef, 'small-ref');
+        elements.forEach(el => observer.observe(el));
     }
-    else {
-        observeVisibility(circles, 'mob-circle-anim');
-        observeVisibility(circlesExp, 'mob-circle-anim');
-        observeVisibility(circlesRef, 'mob-circle-anim');
+
+    function updateCircleBehavior() {
+        if (window.innerWidth >= 1380) {
+            forCircleHover(circles, 'small');
+            forCircleHover(circlesExp, 'small-exp');
+            forCircleHover(circlesRef, 'small-ref');
+        } else {
+            observeVisibility([...circles], 'mob-circle-anim');
+            observeVisibility([...circlesExp], 'mob-circle-anim');
+            observeVisibility([...circlesRef], 'mob-circle-anim');
+        }
     }
-}
 
-// Вызываем при загрузке
-updateCircleBehavior();
+    updateCircleBehavior();
 
-// Следим за изменением размера экрана
-window.addEventListener('resize', updateCircleBehavior);
+    window.addEventListener('resize', () => {
+        setTimeout(updateCircleBehavior, 200);
+    });
+});
+
 
 const intro = document.querySelector('.intro');
 
@@ -171,8 +173,20 @@ organizationModalClose.forEach(closeBtn => {
     };
 });
 
-const burgerBtn = document.querySelector('.burger-btn');
+const burgerBtn = document.querySelectorAll('.burger-btn');
+const burgerMenu = document.querySelector('.burger-menu');
+const burgerMenuClose = document.querySelectorAll('.burger-menu-close');
 
-burgerBtn.onclick = () => {
-    burgerBtn.classList.toggle('burger-btn-active');
-}
+burgerBtn.forEach(el => {
+    el.onclick = () => {
+        burgerMenu.classList.add('burger-menu-active');
+        document.body.style.overflowY = 'hidden';
+    }
+})
+
+burgerMenuClose.forEach(el => {
+    el.onclick = () => {
+        burgerMenu.classList.remove('burger-menu-active');
+        document.body.style.overflowY = 'auto';
+    }
+});

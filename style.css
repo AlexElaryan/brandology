@@ -1458,35 +1458,31 @@ video {
 
 .burger-btn {
     width: 38px;
-    display: flex;
+    display: none;
+    z-index: 11111;
     flex-direction: column;
     gap: 5px;
     position: absolute;
     right: 45px;
     top: 50px;
     transform-origin: left;
+    height: 38px;
 }
 
 .burger-btn span {
     width: 38px;
     height: 1px;
     background: #000;
+    transition: .3s;
 }
 
-
-.burger-btn-active span {
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-.burger-btn-active span:first-of-type {
-    transform: rotateZ(45deg);
+footer .burger-btn span {
+    background: #fff;
 }
 
-.burger-btn-active span:last-of-type {
-    transform: rotateZ(-45deg);
+.burger-menu {
+    display: none;
 }
-
 
 
 @media screen and (max-width:1850px) {
@@ -1819,17 +1815,124 @@ video {
 .for_consultation-mobile {
     display: none !important;
 }
+.circle-item.hovered {
+    transform: scale(1.1); /* Пример увеличения элемента */
+    transition: transform 0.3s ease;
+}
+
+/* Для анимации на мобильных устройствах */
+.circle-item.animated {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Начальное состояние для анимации на мобильных */
+.circle-item {
+    opacity: 0;
+    transform: translateY(20px);
+}
 
 @media screen and (max-width:1380px) {
+    .burger-menu {
+        position: fixed;
+        background: url(img/ЗЕЛЕНОЕ\ ПЯТНО.ФОН.gif) no-repeat center;
+        background-size: 681px 384px;
+        background-color: #000;
+        left: 0;
+        top: 0;
+        z-index: 111111;
+        width: 100%;
+        height: 100vh;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        transform: rotateY(180deg) scale(0);
+        transform-origin: right;
+        backface-visibility: hidden;
+    }
+
+    .burger-menu-active {
+        transform: rotateY(0deg) scale(1);
+
+    }
+
+    .burger-menu::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1111;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    .burger-menu * {
+        z-index: 11111;
+    }
+
+    .burger-menu nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        list-style: none;
+        margin-top: 10px;
+    }
+
+    .burger-menu nav ul a {
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .burger-menu span {
+        font-size: 15px;
+        color: #fff;
+    }
+
+    .burger-menu-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .burger-menu-bottom>div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .burger-menu-bottom button {
+        padding: 9px 15px;
+        background: #fff;
+        font-size: 15px;
+        color: #000;
+        border-radius: 100px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        border: none;
+    }
+
+    .burger-menu-close {
+        align-self: flex-end;
+    }
+
+    .burger-btn {
+        display: flex;
+    }
+
     main {
         height: fit-content;
         padding-top: 50px;
         padding-bottom: 50px;
     }
+
     header nav {
         display: none;
     }
-/* 
+
+    /* 
     header {
         position: absolute;
         left: 0;
@@ -1914,7 +2017,7 @@ video {
         padding: 50px 40px 50px 50px;
     }
 
-    .home-head .bg-video {
+    .head .bg-video {
         width: 468px;
         height: 468px;
         left: 50%;
@@ -2153,7 +2256,9 @@ video {
         z-index: 1;
     }
 
-    .footer-top, .footer-title, .footer-bottom {
+    .footer-top,
+    .footer-title,
+    .footer-bottom {
         z-index: 11;
     }
 
@@ -2254,7 +2359,7 @@ video {
     }
      */
 
-     .mission-circle {
+    .mission-circle {
         width: 200px;
         height: 200px;
         transition: 0.3s;
@@ -2273,7 +2378,7 @@ video {
         position: absolute;
         opacity: 0;
     }
-    
+
     .mission-circle:first-of-type p {
         width: fit-content;
     }
@@ -2314,5 +2419,24 @@ video {
         opacity: 1;
         display: flex;
         position: relative;
+    }
+    .intro-to-services-block {
+        left: 0px;
+        width: 100%;
+        gap: 5px;
+    }
+
+    .intro-to-cases-item {
+        padding: 9px 15px;
+    }
+
+    .intro-to-cases-item a {
+        font-size: 15px;
+    }
+
+    .intro-to-cases-block {
+        left: 50px;
+        top: 87px;
+        gap: 5px;
     }
 }
