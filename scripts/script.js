@@ -16,29 +16,25 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    let observer = null;
-
-    function observeVisibility(elements, animateClass) {
-        if (observer) observer.disconnect();
-
-        observer = new IntersectionObserver(entries => {
-            let mostVisible = null;
-            let maxRatio = 0;
-
-            entries.forEach(entry => {
-                if (entry.intersectionRatio > maxRatio) {
-                    mostVisible = entry.target;
-                    maxRatio = entry.intersectionRatio;
-                }
+    function forCircleScroll(circle, classN) {
+        if (circle) {
+            document.addEventListener("scroll", function () {
+                const viewportCenter = window.innerHeight / 2;
+                const threshold = 150;
+                circle.forEach(item => {
+                    const rect = item.getBoundingClientRect();
+                    const itemCenter = rect.top + rect.height / 2;
+    
+                    if (itemCenter >= viewportCenter - threshold && itemCenter <= viewportCenter + threshold) {
+                        item.classList.add(classN);
+                    } else {
+                        item.classList.remove(classN);
+                    }
+                });
             });
-
-            elements.forEach(el => {
-                el.classList.toggle(animateClass, el === mostVisible);
-            });
-        }, { threshold: [0.1, 0.5, 1] });
-
-        elements.forEach(el => observer.observe(el));
+        }
     }
+
 
     function updateCircleBehavior() {
         if (window.innerWidth >= 1380) {
@@ -46,9 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
             forCircleHover(circlesExp, 'small-exp');
             forCircleHover(circlesRef, 'small-ref');
         } else {
-            observeVisibility([...circles], 'mob-circle-anim');
-            observeVisibility([...circlesExp], 'mob-circle-anim');
-            observeVisibility([...circlesRef], 'mob-circle-anim');
+            forCircleScroll([...circles], 'mob-circle-anim');
+            forCircleScroll([...circlesExp], 'mob-circle-anim');
+            forCircleScroll([...circlesRef], 'mob-circle-anim');
         }
     }
 
@@ -190,3 +186,9 @@ burgerMenuClose.forEach(el => {
         document.body.style.overflowY = 'auto';
     }
 });
+
+const toCasesMenuBtn = document.querySelectorAll('.tocasesmenu-btn');
+
+toCasesMenuBtn.forEach(el => {
+    el.onclick = () => window.location.href = 'toCases.html';
+})

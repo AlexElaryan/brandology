@@ -1833,6 +1833,11 @@ footer .burger-btn span {
     transform: translateY(20px);
 }
 
+
+.casePrev_cont > div > svg {
+    display: none;
+}
+
 @media screen and (max-width:1380px) {
     .burger-menu {
         position: fixed;
@@ -2058,10 +2063,28 @@ footer .burger-btn span {
         flex-direction: column;
     }
 
-    .mission-circle {
+
+    .mission-circle, .refauna_circles-item, .refauna_circles-item:hover {
         width: 200px;
         height: 200px;
         padding: 20px;
+        transition: ease-out all 0.3s;
+    }
+
+    .refauna_circles-item:hover p:last-of-type {
+        transform: scale(0);
+        display: none;
+    }
+
+    .mission-circle p:last-of-type, .refauna_circles-item p:last-of-type {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    .mob-circle-anim p:last-of-type {
+        opacity: 1 !important;
+        transform: scale(1) !important;
+        display: block !important;
     }
 
     .expert-circle {
@@ -2410,8 +2433,8 @@ footer .burger-btn span {
     }
 
     .mob-circle-anim {
-        width: 310px;
-        height: 310px;
+        width: 310px !important;
+        height: 310px !important;
         gap: 5px;
     }
 
@@ -2439,4 +2462,157 @@ footer .burger-btn span {
         top: 87px;
         gap: 5px;
     }
+
+    .casePrev_cont .typography-01 {
+        margin-left: 0;
+        margin-top: 0;
+    }
+    .casePrev_content {
+        width: 100%;
+        gap: 30px;
+    }
+
+    .casePrev_content>div {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 77px;
+    }
+
+    .casePrev_cont header {
+        display: none;
+    }
+    .casePrev_cont {
+        background-position: center;
+        background-size: cover;
+    }
+
+    .casePrev_cont>div {
+        padding: 50px;
+        justify-content: space-between;
+    }
+
+    .casePrev_cont > div > svg {
+        display: block;
+        align-self: flex-end;
+    }
+    .vanvex_intro h2 {
+        width: fit-content;
+        margin-left: 0;
+    }
+
+    .vanvex_intro>div {
+        padding-top: 20px;
+        gap: 50px;
+    }
+
+    .vanvex_intro>div div:last-of-type {
+        display: none;
+    }
+
+    .ourSolutionAndMore, .case-mission, .clientReceives {
+        padding: 160px 50px;
+    }
+
+    .case-mission {
+        gap: 15px;
+    }
+
+    .case-mission>div {
+        max-width: 100%;
+        gap: 15px;
+    }
+
+    .case-mission span {
+        margin-top: 15px;
+    }
+
+    .ourSolutionAndMore {
+        padding: 50px 20px 50px 50px;
+        gap: 130px;
+    }
+
+    .ourSolutionAndMore h2 {
+        width: fit-content;
+        max-width: 117px;
+        min-width: 117px;
+    }
+
+    .ourSolutionAndMore>div {
+        width: fit-content;
+        max-width: fit-content;
+        gap: 35px;
+    }
+
+    .ourSolutionAndMore p {
+        max-width: fit-content;
+    }
+    .clientReceives {
+        padding: 160px 50px;
+        align-items: center;
+        min-height: fit-content;
+    }
+
+    .clientReceives>div {
+        gap: 30px;
+    }
+
+    .clientReceives h2 {
+        max-width: 167px;
+        min-width: 167px;
+    }
+    .vanvex_intro {
+        gap: 50px;
+        justify-content: center;
+        padding-bottom: 0;
+    }
+
+    .vanvex-head {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .refauna_circles {
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .clientReceives h2 {
+        margin-left: 0;
+    }
+    .clientReceives>div {
+        gap: 70px;
+    }
+
+    .anheleOurSAM>div:first-of-type {
+        margin-left: 0;
+    }
+
+    .anhele_results {
+        padding: 160px 50px;
+        min-height: fit-content;
+    }
+
+    .anhele_results>div {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .anhele_result-item {
+        gap: 20px;
+    }
+
+    .anhele_result-item>div {
+        gap: 10px;
+    }
+
+    .witexOurSam .clientReceives h2 {
+        max-width: 167px;
+        min-width: 167px;
+    }
+
+    .witexOurSam .clientReceives {
+        padding-left: 0;
+    }
+
 }
