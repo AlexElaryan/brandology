@@ -189,6 +189,16 @@ burgerMenuClose.forEach(el => {
 
 const toCasesMenuBtn = document.querySelectorAll('.tocasesmenu-btn');
 
-toCasesMenuBtn.forEach(el => {
-    el.onclick = () => window.location.href = 'toCases.html';
-})
+if (toCasesMenuBtn) {
+    toCasesMenuBtn.forEach(el => {
+        el.onclick = () => window.location.href = 'toCases.html';
+    })
+}
+
+const toServicesMenuBtn = document.querySelectorAll('.toservicesmenu-btn');
+
+if (toServicesMenuBtn) {
+    toServicesMenuBtn.forEach(el => {
+        el.onclick = () => window.location.href = '../toServices.html';
+    })
+}
