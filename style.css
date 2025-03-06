@@ -2614,5 +2614,7 @@ footer .burger-btn span {
     .witexOurSam .clientReceives {
         padding-left: 0;
     }
-
+    .case-mission-btn {
+        color: #000;
+    }
 }
