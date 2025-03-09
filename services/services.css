@@ -134,6 +134,7 @@ header nav ul li a {
         padding: 50px;
         padding-top: 160px;
         height: 100vh;
+        overflow-y: auto;
         flex-direction: column-reverse;
         justify-content: space-between;
     }
@@ -156,5 +157,9 @@ header nav ul li a {
         position: absolute;
         top: 50px;
         right: 50px;
+    }
+
+    .services-block__left {
+        margin-bottom: 50px;
     }
 }
