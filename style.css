@@ -1815,8 +1815,10 @@ footer .burger-btn span {
 .for_consultation-mobile {
     display: none !important;
 }
+
 .circle-item.hovered {
-    transform: scale(1.1); /* Пример увеличения элемента */
+    transform: scale(1.1);
+    /* Пример увеличения элемента */
     transition: transform 0.3s ease;
 }
 
@@ -1834,7 +1836,7 @@ footer .burger-btn span {
 }
 
 
-.casePrev_cont > div > svg {
+.casePrev_cont>div>svg {
     display: none;
 }
 
@@ -1917,6 +1919,11 @@ footer .burger-btn span {
         gap: 10px;
         align-items: center;
         border: none;
+    }
+
+    .burger-menu-bottom button a {
+        color: #000;
+        font-size: 15px;
     }
 
     .burger-menu-close {
@@ -2064,7 +2071,9 @@ footer .burger-btn span {
     }
 
 
-    .mission-circle, .refauna_circles-item, .refauna_circles-item:hover {
+    .mission-circle,
+    .refauna_circles-item,
+    .refauna_circles-item:hover {
         width: 200px;
         height: 200px;
         padding: 20px;
@@ -2076,7 +2085,8 @@ footer .burger-btn span {
         display: none;
     }
 
-    .mission-circle p:last-of-type, .refauna_circles-item p:last-of-type {
+    .mission-circle p:last-of-type,
+    .refauna_circles-item p:last-of-type {
         opacity: 0;
         transform: scale(0);
     }
@@ -2443,6 +2453,7 @@ footer .burger-btn span {
         display: flex;
         position: relative;
     }
+
     .intro-to-services-block {
         left: 0px;
         width: 100%;
@@ -2467,6 +2478,7 @@ footer .burger-btn span {
         margin-left: 0;
         margin-top: 0;
     }
+
     .casePrev_content {
         width: 100%;
         gap: 30px;
@@ -2481,6 +2493,7 @@ footer .burger-btn span {
     .casePrev_cont header {
         display: none;
     }
+
     .casePrev_cont {
         background-position: center;
         background-size: cover;
@@ -2491,10 +2504,11 @@ footer .burger-btn span {
         justify-content: space-between;
     }
 
-    .casePrev_cont > div > svg {
+    .casePrev_cont>div>svg {
         display: block;
         align-self: flex-end;
     }
+
     .vanvex_intro h2 {
         width: fit-content;
         margin-left: 0;
@@ -2509,7 +2523,9 @@ footer .burger-btn span {
         display: none;
     }
 
-    .ourSolutionAndMore, .case-mission, .clientReceives {
+    .ourSolutionAndMore,
+    .case-mission,
+    .clientReceives {
         padding: 160px 50px;
     }
 
@@ -2546,6 +2562,7 @@ footer .burger-btn span {
     .ourSolutionAndMore p {
         max-width: fit-content;
     }
+
     .clientReceives {
         padding: 160px 50px;
         align-items: center;
@@ -2560,6 +2577,7 @@ footer .burger-btn span {
         max-width: 167px;
         min-width: 167px;
     }
+
     .vanvex_intro {
         gap: 50px;
         justify-content: center;
@@ -2580,6 +2598,7 @@ footer .burger-btn span {
     .clientReceives h2 {
         margin-left: 0;
     }
+
     .clientReceives>div {
         gap: 70px;
     }
@@ -2614,7 +2633,19 @@ footer .burger-btn span {
     .witexOurSam .clientReceives {
         padding-left: 0;
     }
+
     .case-mission-btn {
         color: #000;
+    }
+
+    .contact-socials>div {
+        top: 10px;
+    }
+    .case-mission>div div {
+        gap: 5px;
+    }
+
+    .case-mission>div div button {
+        padding: 10px 20px;
     }
 }

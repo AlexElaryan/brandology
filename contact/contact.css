@@ -162,3 +162,41 @@ form input::placeholder {
         padding: 50px 100px 100px 400px;
     }
 }
+
+@media screen and (max-width:1380px) {
+
+    .contact-burger-btn span {
+        background: #fff;
+    }
+    .contact-block {
+        padding: 50px;
+        gap: 30px;
+    }
+
+    .contact-form__top {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    form {
+        gap: 20px;
+        margin-top: 50%;
+    }
+
+    .contact-form__bottom {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .submit {
+        width: auto;
+        height: auto;
+        padding: 20px;
+    }
+
+    .contact-form__bottom div {
+        gap: 10px;
+    }
+
+}

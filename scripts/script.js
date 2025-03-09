@@ -78,6 +78,7 @@ openPrevSites(toServices, toServicesBlock);
 
 const toWk = document.querySelectorAll('.contact-socials>div div:last-of-type');
 const toTelegram = document.querySelectorAll('.contact-socials>div div:first-of-type');
+const toTelegram1 = document.querySelectorAll('.toTelegram');
 
 toWk.forEach(el => {
     el.onclick = () => {
@@ -86,6 +87,12 @@ toWk.forEach(el => {
 });
 
 toTelegram.forEach(el => {
+    el.onclick = () => {
+        window.open('https://t.me/+_requ6cgzuFlYjNi', '_blank');
+    };
+});
+
+toTelegram1.forEach(el => {
     el.onclick = () => {
         window.open('https://t.me/+_requ6cgzuFlYjNi', '_blank');
     };

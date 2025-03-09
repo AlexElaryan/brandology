@@ -88,7 +88,7 @@ header nav ul li a {
 }
 
 .services-block__right-item:hover {
-    height: 132px;
+    height: fit-content;
 }
 
 .services-block__right-item:hover svg {
@@ -143,7 +143,7 @@ header nav ul li a {
     }
 
     .services-block__right-item {
-        height: 30px;
+        height: 28px;
         padding: 7px 15px;
         gap: 5px;
     }

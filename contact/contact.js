@@ -45,6 +45,7 @@ form.addEventListener('submit', function (e) {
 
 const toWk = document.querySelectorAll('.contact-socials>div div:last-of-type');
 const toTelegram = document.querySelectorAll('.contact-socials>div div:first-of-type');
+const toTelegram1 = document.querySelectorAll('.toTelegram');
 
 toWk.forEach(el => {
     el.onclick = () => {
@@ -56,4 +57,29 @@ toTelegram.forEach(el => {
     el.onclick = () => {
         window.open('https://t.me/+_requ6cgzuFlYjNi', '_blank');
     };
+});
+
+toTelegram1.forEach(el => {
+    el.onclick = () => {
+        window.open('https://t.me/+_requ6cgzuFlYjNi', '_blank');
+    };
+});
+
+
+const burgerBtn = document.querySelectorAll('.burger-btn');
+const burgerMenu = document.querySelector('.burger-menu');
+const burgerMenuClose = document.querySelectorAll('.burger-menu-close');
+
+burgerBtn.forEach(el => {
+    el.onclick = () => {
+        burgerMenu.classList.add('burger-menu-active');
+        document.body.style.overflowY = 'hidden';
+    }
+})
+
+burgerMenuClose.forEach(el => {
+    el.onclick = () => {
+        burgerMenu.classList.remove('burger-menu-active');
+        document.body.style.overflowY = 'auto';
+    }
 });
