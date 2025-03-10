@@ -163,3 +163,10 @@ header nav ul li a {
         margin-bottom: 50px;
     }
 }
+
+@media screen and (max-width:407px) {
+    .services-block {
+        padding: 20px;
+        padding-top: 160px;
+    }
+}
