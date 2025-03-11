@@ -731,10 +731,14 @@ main span {
     text-transform: uppercase;
 }
 
+.work-process_item-only span {
+    display: none;
+}
+
 .work-process_item-content p {
     width: fit-content;
     text-transform: uppercase;
-    text-wrap: nowrap;
+    /* text-wrap: nowrap; */
 }
 
 footer {
@@ -2647,5 +2651,9 @@ footer .burger-btn span {
 
     .case-mission>div div button {
         padding: 10px 20px;
+    }
+
+    .work-process_item-only span {
+        display: block;
     }
 }
