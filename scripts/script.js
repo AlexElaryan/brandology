@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     function updateCircleBehavior() {
-        if (window.innerWidth >= 1380) {
+        if (window.innerWidth >= 1200) {
             forCircleHover(circles, 'small');
             forCircleHover(circlesExp, 'small-exp');
             forCircleHover(circlesRef, 'small-ref');

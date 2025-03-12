@@ -1849,7 +1849,100 @@ footer .burger-btn span {
     display: none;
 }
 
-@media screen and (max-width:1380px) {
+
+@media screen and (min-width:1200px) and (max-width: 1380px) {
+    .mission-circle {
+        width: 520px;
+        height: 520px;
+    }
+    .mission-circle:hover {
+        width: 620px;
+        height: 620px;
+    }
+
+    .mission-circle.small {
+        width: 420px;
+        height: 420px;
+    }
+
+    .home-head {
+        background-repeat: no-repeat;
+        background-size: auto;
+        overflow: hidden;
+    }
+    .intro {
+        margin-top: 100px;
+    }
+    .expert-circle:hover {
+        width: 430px;
+        height: 430px;
+    }
+
+    .expert-circle.small-exp {
+        width: 230px;
+        height: 230px;
+    }
+    .expert-circle {
+        width: 330px;
+        height: 330px;
+    }
+
+    .wu_block>div {
+        padding: 25px;
+    }
+    .wu_block>div h2::after {
+        width: 70px;
+    }
+
+    .casePrev_cont .typography-01 {
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+
+    .casePrev_cont header, .vanvex_intro h2, .refauna_clientReceives h2, .anheleOurSAM>div:first-of-type {
+        margin-left: 0px;
+    }
+
+    .clientReceives>div {
+        width: 100%;
+    }
+
+    .refauna_circles-item {
+        width: 270px;
+        height: 270px;
+    }
+
+    .small-ref {
+        width: 200px;
+        height: 200px;
+    }
+
+    .refauna_circles-item:hover {
+        width: 400px;
+        height: 400px;
+    }
+
+    .vanvex_intro {
+        margin-top: 100px;
+    }
+
+    .vanvex-head header, .witexOurSam .clientReceives {
+        padding-left: 0;
+    }
+
+    .ourSolutionAndMore, .case-mission, .clientReceives, .anhele_results {
+        padding-left: 100px;
+    }
+}
+
+@media screen and (max-height:920px) and (min-width:1200px) and (max-width:1380px) {
+    .intro-to-cases-block {
+        top: 150px;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width:1200px) {
     .burger-menu {
         position: fixed;
         background: url(img/ЗЕЛЕНОЕ\ ПЯТНО.ФОН.gif) no-repeat center;
