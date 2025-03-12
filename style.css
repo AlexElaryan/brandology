@@ -956,6 +956,11 @@ footer .contact-socials span {
     text-transform: uppercase;
 }
 
+.case-img-block {
+    width: 100%;
+    overflow: hidden;
+}
+
 .case-img {
     object-fit: cover;
     width: 100%;
@@ -2655,5 +2660,12 @@ footer .burger-btn span {
 
     .work-process_item-only span {
         display: block;
+    }
+
+    .case-img {
+        width: 270%;
+        margin-left: -50%;
+        transform: translateX(-12.5%);
+        object-position: center;
     }
 }
