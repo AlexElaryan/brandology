@@ -1933,6 +1933,9 @@ footer .burger-btn span {
     .ourSolutionAndMore, .case-mission, .clientReceives, .anhele_results {
         padding-left: 100px;
     }
+    .write-us>h2 {
+        margin-left: 0;
+    }
 }
 
 @media screen and (max-height:920px) and (min-width:1200px) and (max-width:1380px) {
