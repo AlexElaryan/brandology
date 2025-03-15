@@ -2207,6 +2207,10 @@ footer .burger-btn span {
         height: 200px;
     }
 
+    .refauna_circles-item .typography-03 {
+        font-size: 13px;
+    }
+
     .mission-circle:last-of-type p {
         width: 100%;
     }
