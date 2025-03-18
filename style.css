@@ -353,6 +353,11 @@ main span {
     padding: 200px 0;
 }
 
+.expert-home {
+    padding-top: 200px;
+}
+
+
 .expert-title-b {
     width: 1065px;
     margin: auto;
@@ -2764,9 +2769,7 @@ footer .burger-btn span {
     }
 
     .case-img {
-        width: 270%;
-        margin-left: -50%;
-        transform: translateX(-12.5%);
+        height: 100vh;
         object-position: center;
     }
 }
