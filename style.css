@@ -756,6 +756,13 @@ footer {
     padding: 30px 100px 120px 100px;
     position: relative;
     color: #fff;
+    background: url(img/РОЗ-ФОН.gif);
+    background-size: cover;
+    background-position: center;
+}
+
+footer video {
+    display: none;
 }
 
 .footer-top {
@@ -2392,7 +2399,7 @@ footer .burger-btn span {
         height: 582px;
         padding: 50px 40px 50px 50px;
         overflow: hidden;
-        background: #000;
+        background-color: #000;
     }
 
     footer .bg-video {
